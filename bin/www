@@ -1,0 +1,5 @@
+const http = require("http");
+const serve = require('../server');
+
+const server = http.createServer(serve);
+server.listen(process.env.PORT);

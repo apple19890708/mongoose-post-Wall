@@ -1,7 +1,7 @@
 // 建立新資料Schema
-const mongoose = require('mongoose'); // 載入mongoose
+const {Schema, model} = require('mongoose');
 
-const roomSchema = new mongoose.Schema(
+const roomSchema = new Schema(
 	{
 			name: String,
 			price: {
@@ -24,6 +24,6 @@ const roomSchema = new mongoose.Schema(
 )
 
 // 建立新資料model
-const Room = mongoose.model('Room', roomSchema);
+const Room = model('Room', roomSchema);
 
 module.exports = Room;
